@@ -1,5 +1,12 @@
 package com.demo.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.Optional;
+
+@Component
 public class Knight {
 
     //private RescuingDimselQuest quest = new RescuingDimselQuest();
@@ -8,13 +15,27 @@ public class Knight {
 
 //    private SingYoYeYo quest = new SingYoYeYo();
 
-    private Quest quest;
 
-    public void setQuest(Quest quest) {
-        this.quest = quest;
+    //    @QuestType(type = QuestType.Type.Dimsel)
+    private Quest demsil;
+
+    private MyClass myClass;
+
+    public void setDemsil(Quest demsil) {
+        this.demsil = demsil;
+    }
+
+    public Knight(Optional<MyClass> myClass, Quest demsil) {
+        this.demsil = demsil;
     }
 
     public String goQuest() {
-        return quest.goQuest();
+        return demsil.goQuest();
     }
+
+    @Autowired
+    public void setSpringBean(List<MyInterface> list){
+
+    }
+
 }
