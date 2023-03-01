@@ -8,18 +8,18 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan
+//@ComponentScan
 public class AppConfig {
 
-//    @Bean @Autowired
-//    public Person person(Address address)  {
-//        Person person = new Person();
+    @Bean @Autowired
+    public Person person(Address address)  {
+        Person person = new Person(new Address());
 //        person.setAddress(address);
-//        return person;
-//    }
-//
-//    @Bean
-//    public Address address() {
-//        return new Address();
-//    }
+        return person;
+    }
+
+    @Bean
+    public Address address() {
+        return new Address();
+    }
 }
