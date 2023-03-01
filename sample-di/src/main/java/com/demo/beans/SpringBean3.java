@@ -7,11 +7,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class SpringBean3 implements MyInterface, Ordered {
     public SpringBean3() {
-        System.out.println("Spring Bean 3");
+//        System.out.println("Spring Bean 3");
     }
 
     @Override
     public int getOrder() {
         return 1;
+    }
+
+    public String toString() {
+        return "Spring Bean 3";
     }
 }
