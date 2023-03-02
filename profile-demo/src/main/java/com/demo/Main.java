@@ -8,7 +8,7 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         context.registerShutdownHook();
 
-//        context.getEnvironment().setActiveProfiles("db");
+//        context.getEnvironment().setActiveProfiles("file");
 //        context.register(AppConfig.class);
 //        context.refresh();
         ComplexAction action = context.getBean(ComplexAction.class);

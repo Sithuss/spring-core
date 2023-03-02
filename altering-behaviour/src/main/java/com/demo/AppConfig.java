@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
-@Configuration //@Lazy
+@Configuration @Lazy
 @ComponentScan(lazyInit = true)
 public class AppConfig {
 
@@ -16,7 +16,7 @@ public class AppConfig {
         return new SpringBean4();
     }
 
-    @Bean @Lazy
+    @Bean @Lazy(value = false)
     public SpringBean5 springBean5() {
         return new SpringBean5();
     }
