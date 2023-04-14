@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:/application.properties")
 @Configuration
 @ComponentScan
-
 public class AppConfig {
 
     @Bean(value = {"p1", "p2", "p3"})
